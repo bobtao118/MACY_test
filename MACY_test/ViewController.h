@@ -8,8 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController<UITableViewDataSource,UITableViewDelegate,UISearchBarDelegate,UIAlertViewDelegate>
+@property (nonatomic) NSMutableArray *result;
+@property (nonatomic) NSMutableArray *detail;
+@property (nonatomic) BOOL flag;
 
-
+@property (strong, nonatomic) IBOutlet UISearchBar *searchBar;
+@property (strong, nonatomic) IBOutlet UITableView *table;
 @end
 
